@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
+.container2
+{
+	position: relative;
+	width: 90%;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+	grid-template-rows: auto;
+	grid-gap: 0 40px;
+}
+.container2 .box
+{
+	position: relative;
+	height: 400px;
+	background-color: #101950;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid #000;
+}
+.container2 .box:before
+{
+	content: '';
+	position: absolute;
+	top: -2px;
+	left: -2px;
+	right: -2px;
+	bottom: -2px;
+	background: #fff;
+	transform: skew(2deg,2deg);
+	z-index: -1;
+}
+.container2 .box:nth-child(1):before
+{
+	background: linear-gradient(315deg,#ff0057,#e64a19);
+}
+.container2 .box:nth-child(2):before
+{
+	background: linear-gradient(315deg,#89ff00,#00bcd4)
+}
+.container2 .box:nth-child(3):before
+{
+	background: linear-gradient(315deg,#e91e63,#5d02ff)
+}
+.container2 .box:after
+{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 50%;
+	height: 100%;
+	background: rgba(255,255,255,0.05);
+	pointer-events: none;
+}
+.content
+{
+	position: relative;
+	padding: 10px;
+	transform: translateY(20px);
+}
+.box .content h2
+{
+	position: absolute;
+	top: -100px;
+	right: 20px;
+	margin: 0;
+	padding: 0;
+	font-size: 8em;
+	color: rgba(255,255,255,.09);
+	transition: 0.5s;
+}
+.box:hover .content h2
+{
+	top: -150px;
+}
+.box .content h3
+{
+	margin: 0 0 10px;
+	padding: 0;
+	font-size: 24px;
+	font-weight: 500;
+	color: #fff;
+}
+.box .content p
+{
+	margin: 0;
+	padding: 0;
+	color: #fff;
+	font-size: 13px;
+}
