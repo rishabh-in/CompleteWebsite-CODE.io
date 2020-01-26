@@ -102,7 +102,7 @@ def user_posts(username):
 
     user=User.query.filter_by(username=username).first_or_404()
 
-    code_post=CodePost.query.filter_by(author=user).order_by(CodePost.date.desc()).paginate(page=page, per_page=5)
+    code_post=CodePost.query.filter_by(author=user).order_by(CodePost.date.desc()).paginate(page=page, per_page=8)
 
     return render_template("user_blog_post.html",code_post=code_post,user=user)
 
